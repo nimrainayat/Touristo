@@ -1,7 +1,7 @@
 <?php 
 // DB credentials.
 define('DB_HOST','touristo-server.mysql.database.azure.com');
-define('DB_USER','opdkocanzw@touristo-server');
+define('DB_USER','opdkocanzw@touristo-server.mysql.database.azure.com');
 define('DB_PASS','rJ6$MXA9H9tfBops');
 define('DB_NAME','touristo-database');
 // Establish database connection.

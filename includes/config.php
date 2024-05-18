@@ -1,9 +1,9 @@
 <?php 
 // DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','tms');
+define('DB_HOST','touristo-server');
+define('DB_USER','opdkocanzw');
+define('DB_PASS','rJ6$MXA9H9tfBops');
+define('DB_NAME','touristo-database');
 // Establish database connection.
 try
 {

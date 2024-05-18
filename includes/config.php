@@ -1,8 +1,8 @@
 <?php 
 // DB credentials.
 define('DB_HOST','touristo-server.mysql.database.azure.com');
-define('DB_USER','opdkocanzw@touristo-server.mysql.database.azure.com');
-define('DB_PASS','rJ6$MXA9H9tfBops');
+define('DB_USER','ylfdkynmxd@touristo-server.mysql.database.azure.com');
+define('DB_PASS','pfFm$U5Gz7MoncYY');
 define('DB_NAME','touristo-database');
 // Establish database connection.
 try

@@ -46,8 +46,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
@@ -57,13 +55,6 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2E9285F7CD664779921B45089A44F2E6 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6DD8C4B75918465D888D0540ECBF3482 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3CD8AE5421BC470B9002F2A3A854AA33 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -71,5 +62,5 @@ jobs:
         with:
           app-name: 'Touristo'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0FB5676F3F1944C58F1B5013AFC7991C }}
           package: .
-          
